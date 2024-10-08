@@ -30,7 +30,11 @@ const columns: Column<(typeof data)[0]>[] = [
 const isModalOpen = ref(false);
 </script>
 <template>
-  <Table :columns="columns" :data="data" />
+  <Table :columns="columns" :data="data">
+    <template #product-td="{ value }">
+      <div>a {{ value }}</div>
+    </template>
+  </Table>
   <button @click="isModalOpen = true">SHOW MODAL</button>
   <Modal :open="isModalOpen" @close="isModalOpen = false">
     <template #header> Header </template>

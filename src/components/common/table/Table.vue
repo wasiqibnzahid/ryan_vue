@@ -48,6 +48,7 @@ function cellClicked(cell: T, accessor: keyof T, index: number) {
                 :name="`${column.accessor.toString()}-td`"
                 :column="column"
                 :row="row"
+                :value="row[column.accessor]"
                 >{{ row[column.accessor] }}</slot
               >
             </td>
