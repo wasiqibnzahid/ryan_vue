@@ -1,0 +1,21 @@
+$colors: (
+  primary: #605dec,
+  primary-light: #ededfe,
+  success: #31aa27,
+  success-light: #ebf6eb,
+  danger: #f93232,
+  danger-light: #fff0f0,
+  warn: #e99518,
+  warn-light: #fff4e4,
+  white: #fff,
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+}
